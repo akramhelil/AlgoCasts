@@ -8,8 +8,12 @@
 
 function reverse(str) {
     // ES2015 Arrow funtion solution 
+    debugger;
+    // run node inspect index.js after got in to the folder, then we enter to the REPL mode, then continue the code, then inspect the str 
     return str.split('').reduce((rev, char) => char + rev, '');
 }
+
+reverse('dkfjhdsfkjhakfgjhfg');
 
 module.exports = reverse;
 

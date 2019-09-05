@@ -8,6 +8,49 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
-function chunk(array, size) {}
+function chunk(array, size) {
+    
+    // my solution 
+    // const chunked = [];
+    
+    // array.forEach(el => {
+    //     const lastElChunked = chunked[chunked.length - 1]
+    //     if (!lastElChunked || lastElChunked.length === size) {
+    //         chunked.push([el])
+    //     } else {
+    //         lastElChunked.push(el)
+    //     }
+    // })
+    // return chunked;
+
+
+    // solution 2 
+    // for (let el of array) {
+    //     const last = chunked[chunked.length - 1]
+
+    //     if (!last || last.length === size) {
+    //         chunked.push([el])
+    //     } else {
+    //         last.push(el)
+    //     }
+    // }
+    // return chunked;
+
+
+
+    // solution 3 tilizing Slice
+    const chunked = [];
+    let index = 0;
+
+    while (index < array.length) {
+        let sliced = array.slice(index, index + size)
+        chunked.push(sliced)
+        index += size
+    }
+    return chunked;
+
+  
+
+}
 
 module.exports = chunk;

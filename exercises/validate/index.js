@@ -7,6 +7,9 @@
 
 function validate(node, min = null, max = null) {
     // recursion to pass through  the information 
+    if (max !== null && node.data > max) {
+        return false 
+    }
 }
 
 module.exports = validate;
